@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fatura+</title>
+        <style>
+            body
+            {
+                background-color: #1b2328;
+                color: white;
+            }
+            .loginBox
+            {
+                margin-top: 25%;
+                padding: 10px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                display: block;
+                background-color: #2b373f;
+                border-radius: 10px;
+                width: 30%;
+            }
+            .objectLogin
+            {
+                padding-left: 15%;
+                text-align: left;
+                display: block;
+            }
+            .inputLogin
+            {
+                width: 80%;
+            }
+            .loginButton
+            {
+                display: block;
+                padding: 0.2em 0.7em 0.2em 0.7em;
+                margin-top: 10px;
+                margin-left: 70%;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loginBox">
+            <form method="post">
+                <label class="objectLogin" for="email">
+                    E-mail<br>
+                </label>
+                <input class="inputLogin" id="email" name="email" type="email"><br>
+                <label class="objectLogin" for="password">
+                    Password<br>
+                </label>
+                <input class="inputLogin" id="password" name="password" type="password">
+                <input class="loginButton" id="login" name="login" type="submit" value="Login">
+            </form>
+          </div>
+    </body>
+</html>

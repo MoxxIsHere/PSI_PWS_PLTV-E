@@ -8,7 +8,6 @@
             session_start();
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['password'] = $_POST['password'];
-
-            include '../visual/main.html';
+            header("Location: ..\controller\main.php");
         }
     }

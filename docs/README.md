@@ -8,4 +8,10 @@ Projecto semestral baseado na produção de um website que realiza faturas de co
 
 ## Backlog
 
-
+| Feito | Dev                                                              | Função    | Descrição                                                                  | Data           |
+|-------|------------------------------------------------------------------|-----------|----------------------------------------------------------------------------|----------------|
+| ✔     | [Miguel](https://www.github.com/MoxxIsHere "@MoxxIsHere")        | Login     | Página de login do website.                                                | 26/05/2022     |
+| ✔     | [Miguel](https://www.github.com/MoxxIsHere "@MoxxIsHere")        | DataBase  | Base de dados da aplicação.                                                | 26/06/2022     |
+| ✖     | [Fabio](https://www.github.com/fabiocabaceira "@fabiocabaceira") | ParseRole | Identificador do acesso do utilizador.                                     | / /            |
+| ✖     | [Miguel](https://www.github.com/MoxxIsHere "@MoxxIsHere")        | CheckDB   | Buscar informação de utilizador à base de dados. (ligação à base de dados) | / /            |
+| ✖     | [Fabio](https://www.github.com/fabiocabaceira "@fabiocabaceira") | Relatório | Relatório do projecto de PWS                                               | Próxima semana |

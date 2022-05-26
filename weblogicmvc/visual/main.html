@@ -8,10 +8,96 @@
             {
                 background-color: #1b2328;
                 color: white;
+                margin: 0;
+            }
+            .separatorPage
+            {
+                background-color: #36454f;
+                width: 80%;
+                min-width: 80%;
+                height: 95%;
+                min-height: 500px;
+                margin: 5% 10% 0 10%;
+                border-radius: 15px;
+            }
+            .sideSeparator
+            {
+                display: inline-block;
+                background-color: #2b373f;
+                width: 20%;
+                min-width: 20%;
+                height: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                float: left;
+                color: white;
+                border-radius: 15px 0 0 15px;
+            }
+            .sideSeparator a
+            {
+                margin-left: 15px;
+                text-decoration: none;
+                color: #97a0a9;
+            }
+            .sideSeparator a:hover
+            {
+                text-decoration: none;
+                color: white;
+            }
+            .contentSeparator
+            {
+                display: inline-block;
+                float: right;
+                width: 80%;
+                min-width: 80%;
+                height: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                background-color: #fffcf3;
+                color: black;
+                border-radius: 0 15px 15px 0;
+            }
+            .tabelaFacturas tr:nth-child(even)
+            {
+                background-color: #709cab;
+            }
+            .tabelaFacturas th:nth-child(even),td:nth-child(even)
+            {
+                background-color: rgba(85, 62, 114, 0.4);
+            }
+            .tabelaNavegador
+            {
+
             }
         </style>
     </head>
     <body>
-
+        <div class="separatorPage">
+            <div class="sideSeparator">
+                <table class="tabelaNavegador">
+                    <a href="https://www.google.pt">Facturas</a>
+                </table>
+            </div>
+            <div class="contentSeparator">
+                <table class="tabelaFacturas">
+                    <tr>
+                        <th>
+                            A
+                        </th>
+                        <th>
+                            B
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            C
+                        </td>
+                        <td>
+                            D
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
     include '../visual/login.html';
     include '../model/login.php';
+
     if(isset($_POST['login']))
     {
         if(loginAuthenticate($_POST['email'], $_POST['password']))

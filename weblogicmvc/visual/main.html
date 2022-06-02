@@ -22,7 +22,8 @@
             }
             .sideSeparator
             {
-                display: inline-block;
+                text-align: center;
+                display: table;
                 background-color: #2b373f;
                 width: 20%;
                 min-width: 20%;
@@ -35,9 +36,18 @@
             }
             .sideSeparator a
             {
-                margin-left: 15px;
+                text-align: center;
+                width: 100%;
+                display: table;
                 text-decoration: none;
                 color: #97a0a9;
+            }
+            .sideSeparator p
+            {
+                color: #e9f6ff;
+                text-align: center;
+                width: 100%;
+                margin: 0.2em 0 0 0;
             }
             .sideSeparator a:hover
             {
@@ -67,7 +77,13 @@
             }
             .tabelaNavegador
             {
-
+                width: 100%;
+            }
+            .tabelaNavegador td
+            {
+                border-radius: 15px 0 0 15px;
+                text-align: center;
+                background-color: #2b373f;
             }
         </style>
     </head>
@@ -75,7 +91,22 @@
         <div class="separatorPage">
             <div class="sideSeparator">
                 <table class="tabelaNavegador">
-                    <a href="https://www.google.pt">Facturas</a>
+                    <tr>
+                        <td>
+                            <p>Logged in</p>
+                            <p id="loggedUser">ANON</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://www.google.pt">Facturas</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="../controller/login.php">Log Out</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div class="contentSeparator">

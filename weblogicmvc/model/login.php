@@ -14,7 +14,11 @@
             );
             $cfg->set_default_connection('development');
         });
-        $user = User::find(array('email' => $email));
+        $user = User::find(
+            array(
+                'email' => $email
+            )
+        );
         if($user == null)
         {
             return false;

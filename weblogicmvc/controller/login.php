@@ -1,4 +1,8 @@
 <?php
+    if(isset($_SESSION))
+    {
+        session_destroy();
+    }
     include '../visual/login.html';
     include '../model/login.php';
 

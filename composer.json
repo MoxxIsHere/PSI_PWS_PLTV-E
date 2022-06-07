@@ -1,0 +1,12 @@
+{
+    "name": "miguel/psi_pws_pltv-e",
+    "authors": [
+        {
+            "name": "Miguel Agostinho",
+            "email": "miguel.Kuka@gmail.com"
+        }
+    ],
+    "require": {
+        "php-activerecord/php-activerecord": "^1.2"
+    }
+}

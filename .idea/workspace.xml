@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/.$Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio.dtmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.$Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio.dtmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PSI_PWS_PLTV-E.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PSI_PWS_PLTV-E.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -26,19 +37,27 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+    <include_path>
+      <path value="$USER_HOME$/vendor/composer" />
+      <path value="$USER_HOME$/vendor/php-activerecord/php-activerecord" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/php-activerecord" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="29vUQwfGv6bUAi0yZBvO3jd9Iju" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../wamp64/www/phpscripts/ficha5" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,6 +68,8 @@
       <updated>1653993040023</updated>
       <workItem from="1653993042187" duration="1329000" />
       <workItem from="1654168264743" duration="522000" />
+      <workItem from="1655066883593" duration="1147000" />
+      <workItem from="1655126058826" duration="491000" />
     </task>
     <servers />
   </component>

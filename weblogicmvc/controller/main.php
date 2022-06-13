@@ -10,14 +10,14 @@
     <script>
         document.getElementById(\"loggedUser\").innerHTML = \"$username ($role)\";
     </script>
-    ";
+    ";//Muda o nome e o role do utilizador com conta iniciada (não é HTML só faz modificações ao mesmo)
 
     function getFromUser($column)
     {
         include_once '../model/ActiveRecord/Users.php';
         include_once '../../vendor/autoload.php';
 
-        ActiveRecord\Config::initialize(function($cfg)
+        ActiveRecord\Config::initialize(function($cfg) //Configuração do Active Record
         {
             $cfg->set_model_directory('..\model\ActiveRecord');
             $cfg->set_connections(

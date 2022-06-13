@@ -4,7 +4,7 @@
         include '../model/ActiveRecord/Users.php';
         include_once '../../vendor/autoload.php';
 
-        ActiveRecord\Config::initialize(function($cfg)
+        ActiveRecord\Config::initialize(function($cfg) // Configuração do Active Record
         {
             $cfg->set_model_directory('..\model\ActiveRecord');
             $cfg->set_connections(

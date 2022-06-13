@@ -8,7 +8,7 @@
 
     if(isset($_POST['login']))
     {
-        if(loginAuthenticate($_POST['email'], $_POST['password']))
+        if(loginAuthenticate($_POST['email'], $_POST['password'])) //Verifica se o utilizador existe usando a função loginAuthenticate()
         {
             session_start();
             $_SESSION['email'] = $_POST['email'];

@@ -4,6 +4,8 @@
     <include_path>
       <path value="$USER_HOME$/vendor/composer" />
       <path value="$USER_HOME$/vendor/php-activerecord/php-activerecord" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/php-activerecord" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.0">

@@ -1,0 +1,18 @@
+Landing page com butão entrar e logo da empresa(Ongoing-Fábio)
+
+
+Perfil funcionario: 
+
+Done: Tem de se autenticar para aceder à sua zona reservada;
+
+Em falta 
+
+1 - Gestao de produtos e stocks
+2- Realiza a gestão das taxas de IVA;
+3- Configura os dados da empresa que emite as faturas(empresa que 
+	nos contrata a nós;
+4- Consulta o histórico de faturas já emitidas.
+5 - Atualizar a sua password e email;
+
+
+

@@ -12,7 +12,7 @@
     </script>
     ";//Muda o nome e o role do utilizador com conta iniciada (não é HTML só faz modificações ao mesmo)
 
-    function getFromUser($column)
+    function getFromUser($column) //Função que vai buscar o dado da coluna inserida do utilizador loggado
     {
         include_once '../model/ActiveRecord/Users.php';
         include_once '../../vendor/autoload.php';

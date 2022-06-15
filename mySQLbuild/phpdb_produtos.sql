@@ -23,15 +23,15 @@ DROP TABLE IF EXISTS `produtos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `produtos` (
-  `idProduto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idproduto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `referencia` int(11) NOT NULL,
   `descricao` varchar(64) NOT NULL,
   `preco` float NOT NULL,
   `stock` int(11) NOT NULL DEFAULT '0',
   `taxa` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`idProduto`),
+  PRIMARY KEY (`idproduto`),
   KEY `fk_imposto_idx` (`taxa`),
-  CONSTRAINT `fk_taxa` FOREIGN KEY (`taxa`) REFERENCES `ivas` (`idIva`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_taxa` FOREIGN KEY (`taxa`) REFERENCES `ivas` (`idiva`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

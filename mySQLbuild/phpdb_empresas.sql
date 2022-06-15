@@ -23,16 +23,16 @@ DROP TABLE IF EXISTS `empresas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `empresas` (
-  `idEmpresa` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `designacaoSocial` varchar(64) NOT NULL,
+  `idempresa` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `designacaosocial` varchar(64) NOT NULL,
   `email` varchar(32) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `nif` varchar(9) NOT NULL,
   `morada` varchar(64) NOT NULL,
-  `codigoPostal` varchar(8) NOT NULL,
+  `codigopostal` varchar(8) NOT NULL,
   `localidade` varchar(16) NOT NULL,
   `capital social` varchar(45) NOT NULL,
-  PRIMARY KEY (`idEmpresa`),
+  PRIMARY KEY (`idempresa`),
   UNIQUE KEY `nif_UNIQUE` (`nif`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

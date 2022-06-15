@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `ivas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ivas` (
-  `idIva` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idiva` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `percentagem` int(10) unsigned NOT NULL,
   `descricao` varchar(64) NOT NULL,
-  `emVigor` tinyint(4) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`idIva`)
+  `emvigor` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idiva`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

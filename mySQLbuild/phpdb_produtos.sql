@@ -16,25 +16,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `empresa`
+-- Table structure for table `produto`
 --
 
-DROP TABLE IF EXISTS `empresa`;
+DROP TABLE IF EXISTS `produtos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `empresa` (
-  `idEmpresa` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `designacaoSocial` varchar(64) NOT NULL,
-  `email` varchar(32) NOT NULL,
-  `telefone` varchar(15) NOT NULL,
-  `nif` varchar(9) NOT NULL,
-  `morada` varchar(64) NOT NULL,
-  `codigoPostal` varchar(8) NOT NULL,
-  `localidade` varchar(16) NOT NULL,
-  `capital social` varchar(45) NOT NULL,
-  PRIMARY KEY (`idEmpresa`),
-  UNIQUE KEY `nif_UNIQUE` (`nif`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+CREATE TABLE `produtos` (
+  `idProduto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `referencia` int(11) NOT NULL,
+  `descricao` varchar(64) NOT NULL,
+  `preco` float NOT NULL,
+  `stock` int(11) NOT NULL DEFAULT '0',
+  `taxa` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`idProduto`),
+  KEY `fk_imposto_idx` (`taxa`),
+  CONSTRAINT `fk_taxa` FOREIGN KEY (`taxa`) REFERENCES `ivas` (`idIva`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

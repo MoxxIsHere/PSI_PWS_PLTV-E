@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.$Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio.dtmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.$Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio.dtmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PSI_PWS_PLTV-E.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PSI_PWS_PLTV-E.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagram da base de dados PWS - ongoing - abrir com Diagram.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_empresa.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_fatura.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_iva.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_linhafatura.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_produto.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_user.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -37,10 +34,8 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
-      <path value="$USER_HOME$/vendor/composer" />
-      <path value="$USER_HOME$/vendor/php-activerecord/php-activerecord" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/php-activerecord/php-activerecord" />
     </include_path>
@@ -55,6 +50,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/bin/php/php5.6.40/php.exe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -70,6 +67,9 @@
       <workItem from="1654168264743" duration="522000" />
       <workItem from="1655066883593" duration="1147000" />
       <workItem from="1655126058826" duration="491000" />
+      <workItem from="1655289960661" duration="685000" />
+      <workItem from="1655295062639" duration="2046000" />
+      <workItem from="1655299881044" duration="1892000" />
     </task>
     <servers />
   </component>

@@ -16,25 +16,18 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `fatura`
+-- Table structure for table `iva`
 --
 
-DROP TABLE IF EXISTS `fatura`;
+DROP TABLE IF EXISTS `ivas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `fatura` (
-  `idfatura` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `data` date NOT NULL,
-  `valorTotal` float unsigned NOT NULL,
-  `ivaTotal` float unsigned NOT NULL,
-  `estado` tinyint(3) unsigned NOT NULL,
-  `cliente` int(10) unsigned NOT NULL,
-  `funcionario` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`idfatura`),
-  KEY `fk_cliente_idx` (`cliente`),
-  KEY `fk_funcionario_idx` (`funcionario`),
-  CONSTRAINT `fk_cliente` FOREIGN KEY (`cliente`) REFERENCES `user` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_funcionario` FOREIGN KEY (`funcionario`) REFERENCES `user` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `ivas` (
+  `idIva` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `percentagem` int(10) unsigned NOT NULL,
+  `descricao` varchar(64) NOT NULL,
+  `emVigor` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`idIva`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

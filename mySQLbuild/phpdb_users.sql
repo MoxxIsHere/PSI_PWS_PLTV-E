@@ -16,25 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `linhafatura`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `linhafatura`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `linhafatura` (
-  `idlinhaFatura` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `quantidade` varchar(45) NOT NULL DEFAULT '1',
-  `valor` float NOT NULL,
-  `valorIva` float NOT NULL,
-  `fatura` int(10) unsigned NOT NULL,
-  `produto` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`idlinhaFatura`),
-  KEY `fk_fatura_idx` (`fatura`),
-  KEY `fk_produto_idx` (`produto`),
-  CONSTRAINT `fk_fatura` FOREIGN KEY (`fatura`) REFERENCES `fatura` (`idfatura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_produto` FOREIGN KEY (`produto`) REFERENCES `produto` (`idProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `users` (
+  `idUser` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(16) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `nif` varchar(9) NOT NULL,
+  `morada` varchar(64) NOT NULL,
+  `codigoPostal` varchar(8) NOT NULL,
+  `localidade` varchar(32) NOT NULL,
+  `role` varchar(16) NOT NULL,
+  PRIMARY KEY (`idUser`),
+  UNIQUE KEY `username_UNIQUE` (`username`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `nif_UNIQUE` (`nif`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

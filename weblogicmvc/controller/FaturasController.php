@@ -1,6 +1,6 @@
 <?php
 
-class FaturasController
+
 
 
 include '../view/factura.html';
@@ -21,6 +21,8 @@ ActiveRecord\Config::initialize(function ($cfg) //Configuração do Active Recor
     );
     $cfg->set_default_connection('development');
 });
+
+
 
 if (isset($_POST['novaFactura']))
 {

@@ -26,7 +26,7 @@ CREATE TABLE `produtos` (
   `idproduto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `referencia` int(11) NOT NULL,
   `descricao` varchar(64) NOT NULL,
-  `preco` float NOT NULL,
+  `preco` decimal NOT NULL,
   `stock` int(11) NOT NULL DEFAULT '0',
   `taxa` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idproduto`),

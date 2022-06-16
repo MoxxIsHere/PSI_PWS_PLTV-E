@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `ivas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ivas` (
   `idiva` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `percentagem` int(10) unsigned NOT NULL,
+  `percentagem` decimal(3,2) unsigned NOT NULL,
   `descricao` varchar(64) NOT NULL,
-  `emvigor` tinyint(4) NOT NULL DEFAULT '1',
+  `emvigor` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idiva`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

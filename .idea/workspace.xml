@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="pus o texto do anterior sem querer">
+    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="TOMA">
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Ivas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Produtos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/FaturasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/FaturasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Faturas.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Faturas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Linhafaturas.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Linhafaturas.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +55,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/bin/php/php5.6.40/php.exe&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Miguel/PhpstormProjects/PSI_PWS_PLTV-E/weblogicmvc/controller/FaturasController.php",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "two.files.diff.last.used.file": "C:/Users/Miguel/PhpstormProjects/PSI_PWS_PLTV-E/weblogicmvc/controller/FaturasController.php",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,7 +83,7 @@
       <workItem from="1655289960661" duration="685000" />
       <workItem from="1655295062639" duration="2046000" />
       <workItem from="1655299881044" duration="10240000" />
-      <workItem from="1655383484983" duration="4674000" />
+      <workItem from="1655383484983" duration="8996000" />
     </task>
     <task id="LOCAL-00001" summary="corrigi o sql T_T">
       <created>1655301819527</created>
@@ -122,11 +127,29 @@
       <option name="project" value="LOCAL" />
       <updated>1655385940587</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="TOMA">
+      <created>1655388504406</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655388504406</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -147,6 +170,7 @@
     <MESSAGE value="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php." />
     <MESSAGE value="uhm pus o texto do anterior sem querer" />
     <MESSAGE value="pus o texto do anterior sem querer" />
-    <option name="LAST_COMMIT_MESSAGE" value="pus o texto do anterior sem querer" />
+    <MESSAGE value="TOMA" />
+    <option name="LAST_COMMIT_MESSAGE" value="TOMA" />
   </component>
 </project>

@@ -1,6 +1,9 @@
 <?php
     include '../visual/factura.html';
     include_once '../model/ActiveRecord/Users.php';
+    include_once '../model/ActiveRecord/Empresas.php';
+    include_once '../model/ActiveRecord/Faturas.php';
+    include_once '../model/ActiveRecord/Linhafaturas.php';
     include_once '../../vendor/autoload.php';
     ActiveRecord\Config::initialize(function($cfg) //Configuração do Active Record
     {
@@ -31,23 +34,74 @@
         );
         CriarStart($empresa, $funcionario, $cliente);
     }
+
     function CriarStart($empresa, $funcionario, $cliente)//Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
     {
+        //É PRECISO ADICIONAR SELECÇÃO DE PRODUCTOS
         // =============== Definição dos campos ===============
+        $factura = new Fatura();
+        $dataEmissao = date("d/m/Y - H:i");
+        $factura->data = $dataEmissao;
+
         $empresaNome = $empresa->designacaosocial;
+        $empresaCP = $empresa->codigopostal;
+        $empresaNif = $empresa->nif;
+        $empresaMorada = $empresa->morada;
+        $empresaLocalidade = $empresa->localidade;
+        $empresaTelefone = $empresa->telefone;
 
         $clienteUsername = $cliente->username;
         $clienteCP = $cliente->codigopostal;
         $clienteNif = $cliente->nif;
         $clienteMorada = $cliente->morada;
         $clienteLocalidade = $cliente->localidade;
+        $clienteTelefone = $cliente->telefone;
         // ====================================================
         echo "
             <div id=\"factura\">
                 <div id=\"cabecalho\">
-                    <header>$empresaNome</header>
+                    <p>$dataEmissao</p>
+                    <p>Remetente:</p>
+                        <table>
+                            <tr>
+                                <td>
+                                    Designação:
+                                </td>
+                                <td>
+                                    $empresaNome
+                                </td>
+                                <td>
+                                    Código-Postal:
+                                </td>
+                                <td>
+                                    $empresaCP
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contribuinte:
+                                </td>
+                                <td>
+                                    $empresaNif
+                                </td>
+                                <td>
+                                    Morada:
+                                </td>
+                                <td>
+                                    $empresaMorada, $empresaLocalidade
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Telefone:
+                                </td>
+                                <td>
+                                    $empresaTelefone
+                                </td>
+                            </tr>
+                        </table>
                     <hr>
-                    <p>Cliente:</p>
+                    <p>Destinatário:</p>
                     <table>
                         <tr>
                             <td>
@@ -82,7 +136,7 @@
                                 Telefone:
                             </td>
                             <td>
-                                
+                                $clienteTelefone
                             </td>
                         </tr>
                     </table>
@@ -95,7 +149,45 @@
         echo "
                 </div>
                 <div id=\"rodape\">
-                    
+                    <p>Emitido por:</p>
+                        <table>
+                            <tr>
+                                <td>
+                                    Nome:
+                                </td>
+                                <td>
+                                    $
+                                </td>
+                                <td>
+                                    Código-Postal:
+                                </td>
+                                <td>
+                                    $empresaCP
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contribuinte:
+                                </td>
+                                <td>
+                                    $empresaNif
+                                </td>
+                                <td>
+                                    Morada:
+                                </td>
+                                <td>
+                                    $empresaMorada, $empresaLocalidade
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Telefone:
+                                </td>
+                                <td>
+                                    $empresaTelefone
+                                </td>
+                            </tr>
+                        </table>
                 </div>
             </div>
         ";

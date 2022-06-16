@@ -7,7 +7,6 @@ require_once 'startup/boot.php';
 require_once 'Models/ActiveRecords/Empresas.php';
 require_once 'Models/ActiveRecords/Users.php';
 
-
 // Chamar controladores
 require_once 'Controllers/LoginController.php';
 require_once 'Controllers/FaturasController.php';

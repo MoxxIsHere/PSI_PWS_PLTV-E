@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="função para editar conta">
-      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Empresas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" afterDir="false" />
+    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php.">
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Faturas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Linhafaturas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_empresas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_empresas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_faturas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_faturas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_linhafaturas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_linhafaturas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_produtos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_produtos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_users.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -57,18 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/wamp64/bin/php/php5.6.40/php.exe",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/bin/php/php5.6.40/php.exe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,7 +78,8 @@
       <workItem from="1655126058826" duration="491000" />
       <workItem from="1655289960661" duration="685000" />
       <workItem from="1655295062639" duration="2046000" />
-      <workItem from="1655299881044" duration="10147000" />
+      <workItem from="1655299881044" duration="10240000" />
+      <workItem from="1655383484983" duration="2328000" />
     </task>
     <task id="LOCAL-00001" summary="corrigi o sql T_T">
       <created>1655301819527</created>
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655304051899</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php.">
+      <created>1655316007448</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655316007448</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +131,7 @@
     <MESSAGE value="corrigi o sql T_T" />
     <MESSAGE value="função para criar conta" />
     <MESSAGE value="função para editar conta" />
-    <option name="LAST_COMMIT_MESSAGE" value="função para editar conta" />
+    <MESSAGE value="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php." />
+    <option name="LAST_COMMIT_MESSAGE" value="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php." />
   </component>
 </project>

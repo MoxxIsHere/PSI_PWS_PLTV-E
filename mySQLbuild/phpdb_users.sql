@@ -23,17 +23,17 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `idUser` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `iduser` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(16) NOT NULL,
   `password` varchar(16) NOT NULL,
   `email` varchar(32) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `nif` varchar(9) NOT NULL,
   `morada` varchar(64) NOT NULL,
-  `codigoPostal` varchar(8) NOT NULL,
+  `codigopostal` varchar(8) NOT NULL,
   `localidade` varchar(32) NOT NULL,
   `role` varchar(16) NOT NULL,
-  PRIMARY KEY (`idUser`),
+  PRIMARY KEY (`iduser`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   UNIQUE KEY `nif_UNIQUE` (`nif`)

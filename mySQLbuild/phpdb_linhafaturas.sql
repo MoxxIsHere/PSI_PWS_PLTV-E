@@ -23,17 +23,17 @@ DROP TABLE IF EXISTS `linhafaturas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `linhafaturas` (
-  `idlinhaFatura` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idlinhafatura` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `quantidade` varchar(45) NOT NULL DEFAULT '1',
   `valor` float NOT NULL,
-  `valorIva` float NOT NULL,
+  `valoriva` float NOT NULL,
   `fatura` int(10) unsigned NOT NULL,
   `produto` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`idlinhaFatura`),
+  PRIMARY KEY (`idlinhafatura`),
   KEY `fk_fatura_idx` (`fatura`),
   KEY `fk_produto_idx` (`produto`),
   CONSTRAINT `fk_fatura` FOREIGN KEY (`fatura`) REFERENCES `faturas` (`idfatura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_produto` FOREIGN KEY (`produto`) REFERENCES `produtos` (`idProduto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_produto` FOREIGN KEY (`produto`) REFERENCES `produtos` (`idproduto`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

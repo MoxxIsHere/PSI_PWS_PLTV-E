@@ -25,16 +25,16 @@ DROP TABLE IF EXISTS `faturas`;
 CREATE TABLE `faturas` (
   `idfatura` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `data` date NOT NULL,
-  `valorTotal` float unsigned NOT NULL,
-  `ivaTotal` float unsigned NOT NULL,
+  `valortotal` float unsigned NOT NULL,
+  `ivatotal` float unsigned NOT NULL,
   `estado` tinyint(3) unsigned NOT NULL,
   `cliente` int(10) unsigned NOT NULL,
   `funcionario` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idfatura`),
   KEY `fk_cliente_idx` (`cliente`),
   KEY `fk_funcionario_idx` (`funcionario`),
-  CONSTRAINT `fk_cliente` FOREIGN KEY (`cliente`) REFERENCES `users` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_funcionario` FOREIGN KEY (`funcionario`) REFERENCES `users` (`idUser`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_cliente` FOREIGN KEY (`cliente`) REFERENCES `users` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_funcionario` FOREIGN KEY (`funcionario`) REFERENCES `users` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

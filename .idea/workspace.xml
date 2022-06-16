@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="corrigi o sql T_T">
-      <change afterPath="$PROJECT_DIR$/weblogicmvc/controller/createAccount.php" afterDir="false" />
+    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="função para editar conta">
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Empresas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_empresas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_empresas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_faturas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_faturas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_ivas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_linhafaturas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_linhafaturas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_produtos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_produtos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySQLbuild/phpdb_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mySQLbuild/phpdb_users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +21,13 @@
   <component name="ComposerSettings" doNotAsk="true" notifyAboutMissingVendor="false" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -68,7 +83,7 @@
       <workItem from="1655126058826" duration="491000" />
       <workItem from="1655289960661" duration="685000" />
       <workItem from="1655295062639" duration="2046000" />
-      <workItem from="1655299881044" duration="3596000" />
+      <workItem from="1655299881044" duration="10147000" />
     </task>
     <task id="LOCAL-00001" summary="corrigi o sql T_T">
       <created>1655301819527</created>
@@ -77,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655301819527</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="função para criar conta">
+      <created>1655303522181</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655303522181</updated>
+    </task>
+    <task id="LOCAL-00003" summary="função para editar conta">
+      <created>1655304051899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655304051899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +126,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="corrigi o sql T_T" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrigi o sql T_T" />
+    <MESSAGE value="função para criar conta" />
+    <MESSAGE value="função para editar conta" />
+    <option name="LAST_COMMIT_MESSAGE" value="função para editar conta" />
   </component>
 </project>

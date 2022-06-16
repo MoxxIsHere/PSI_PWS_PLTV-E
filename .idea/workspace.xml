@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php.">
-      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Faturas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weblogicmvc/model/ActiveRecord/Linhafaturas.php" afterDir="false" />
+    <list default="true" id="7e4a6cb6-78a2-465f-8a92-172028609444" name="Changes" comment="pus o texto do anterior sem querer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/controller/factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" beforeDir="false" afterPath="$PROJECT_DIR$/weblogicmvc/visual/factura.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <workItem from="1655289960661" duration="685000" />
       <workItem from="1655295062639" duration="2046000" />
       <workItem from="1655299881044" duration="10240000" />
-      <workItem from="1655383484983" duration="2328000" />
+      <workItem from="1655383484983" duration="4674000" />
     </task>
     <task id="LOCAL-00001" summary="corrigi o sql T_T">
       <created>1655301819527</created>
@@ -109,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655316007448</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php.">
+      <created>1655385913764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655385913764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="pus o texto do anterior sem querer">
+      <created>1655385940587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655385940587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +145,8 @@
     <MESSAGE value="função para criar conta" />
     <MESSAGE value="função para editar conta" />
     <MESSAGE value="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php." />
-    <option name="LAST_COMMIT_MESSAGE" value="Muitas dores de cabeça&#10;Como por exemplo:&#10; - Corrigir outro erro em todos os Scripts de SQL (┬┬﹏┬┬);&#10; - Nova classe Empresas.php;&#10; - factura.html &amp; factura.php." />
+    <MESSAGE value="uhm pus o texto do anterior sem querer" />
+    <MESSAGE value="pus o texto do anterior sem querer" />
+    <option name="LAST_COMMIT_MESSAGE" value="pus o texto do anterior sem querer" />
   </component>
 </project>

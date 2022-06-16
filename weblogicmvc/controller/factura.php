@@ -34,6 +34,7 @@
         );
         CriarStart($empresa, $funcionario, $cliente);
     }
+
     function CriarStart($empresa, $funcionario, $cliente)//Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
     {
         //É PRECISO ADICIONAR SELECÇÃO DE PRODUCTOS
@@ -148,7 +149,45 @@
         echo "
                 </div>
                 <div id=\"rodape\">
-                    
+                    <p>Emitido por:</p>
+                        <table>
+                            <tr>
+                                <td>
+                                    Nome:
+                                </td>
+                                <td>
+                                    $
+                                </td>
+                                <td>
+                                    Código-Postal:
+                                </td>
+                                <td>
+                                    $empresaCP
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contribuinte:
+                                </td>
+                                <td>
+                                    $empresaNif
+                                </td>
+                                <td>
+                                    Morada:
+                                </td>
+                                <td>
+                                    $empresaMorada, $empresaLocalidade
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Telefone:
+                                </td>
+                                <td>
+                                    $empresaTelefone
+                                </td>
+                            </tr>
+                        </table>
                 </div>
             </div>
         ";

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fatura+</title>
-</head>
-<body>
-    <form method="post">
-        <label for="empresa">Empresa </label><input type="text" name="empresa">
-        <label for="cliente">Cliente </label><input type="text" name="cliente">
-        <input type="submit" name="novaFactura" value="Nova Factura">
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fatura+</title>
+    </head>
+    <body>
+        <form method="post">
+            <input type="submit" name="empresa" value="Selecionar Remetente"><label for="empresa" id="empresaSelect"> </label><br>
+            <input type="submit" name="cliente" value="Selecionar Destinatário"><label for="cliente" id="clienteSelect"> </label><br>
+            <input type="submit" name="produto" value="Adicionar Producto"><br>
+        </form>
+        <table id="produtoSelect">
+
+        </table><br>
+        <form method="post">
+            <input type="submit" name="novaFactura" value="Criar Factura">
+        </form>
+    </body>
 </html>

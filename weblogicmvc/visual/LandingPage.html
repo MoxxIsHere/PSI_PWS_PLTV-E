@@ -5,31 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <!-- Web page CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <!-- Simple lightbox CSS -->
-    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
 
-    <!-- Favicons -->
-    <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="assets/icons/apple-touch-icon.png"
-    />
-    <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/icons/favicon-32x32.png"
-    />
-    <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="assets/icons/favicon-16x16.png"
-    />
+
+
 
     <title>Fatura+</title>
     <!--- Css --->
@@ -168,14 +150,7 @@
           color: #fff;
       }
 
-      .blue {
-          background-color: var(--primary-color);
-      }
 
-      .blue:hover {
-          background-color: #095cf7;
-          color: #fff;
-      }
 
       iframe {
           max-width: 30rem;
@@ -187,13 +162,13 @@
 
       .about {
           position: relative;
-          height: 1000px;
+          height: 700px;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
           gap: 1.5rem;
-          margin: 2rem 0;
+          margin: 1rem 0;
       }
       .about h3 {
           font-size: 3em;
@@ -211,8 +186,33 @@
           font-size: 1.8rem;
       }
 
+      footer {
+          border-top: 1px solid #f1f1f1;
+          box-shadow: 0px -2px 3px #f1f1f1;
+          text-align: center;
+          padding: 2rem;
+      }
 
+      .Contacto {
+          position: relative;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin: 2rem 0;
+      }
 
+    .Contacto h3 {
+        font-size: 3em;
+        margin-bottom: -20px;
+    }
+
+    .Contacto p {
+
+        font-size: 1.8rem;
+    }
 
   </style>
 </head>
@@ -235,26 +235,11 @@
         <a href="#about" class="nav-link" id="nav-link1">Sobre nós</a>
     </li>
     <li class="nav-item">
-        <a href="#Developers" class="nav-link" id="nav-link2">Developers</a>
-    </li>
-    <li class="nav-item">
-        <a href="#FAQ" class="nav-link" id="nav-link3">FAQ</a>
-    </li>
-    <li class="nav-item">
-        <a href="#Contacto" class="nav-link" id="Contacto">Contacto</a>
+        <a href="#Contacto" class="nav-link" id="nav-link2">Contacto</a>
     </li>
 
 </ul>
 
-
-<!-- Dark/light theme switcher -->
-
-<!-- Bars -->
-    <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
 </nav>
 
 
@@ -265,10 +250,26 @@
     <div class="intro-text">
         <h1>
             <span class="emite"> Emite as tuas faturas de forma </span> <br />
-            <span class="formas">simples,rápida e direta </span>
+            <span class="formas">simples, rápida e direta </span>
         </h1>
-        <a class="btn red" href="#">Registar</a>
-        <a class="btn blue" href="#">Entrar</a>
+
+    </div>
+    <div>
+        <button class="btn btn-primary" type="button" onclick="window.location.href='../controller/login.php'">login</button>
+        <button class="btn btn-danger" type="button" onclick="window.location.href='../controller/login.php'">Registar</button>
+    </div>
+
+    <div class="i-frame">
+        <iframe
+                width="567"
+                height="294"
+                src="https://www.faturadigital.pt/wp-content/uploads/cache/images/post25/post25-607597503.png"
+                title="Imagem"
+                frameborder="15"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+        <div class="stand-1"></div>
+        <div class="stand-2"></div>
     </div>
     </section>
 
@@ -290,26 +291,26 @@
         </p>
     </section>
 
-<!-- Developers -->
-    <section class="Developers" id="Developers">
-        <div class="developers">
-            <div class="pessoas">
-                <div class="pessoa1">
-                    <p class="name">Fábio Cabaceira</p>
-                </div>
-                <div class="person-2">
-                    <p class="name">Miguel Agostinho</p>
-            </div>
-        </div>
-        </div>
-    </section>
+<section class="Contacto" id="Contacto">
+    <h3>Contacto</h3>
+    <p>
+        faturamais@gmail.com
+    </p>
+
+    <h3></h3>
 
 
-    <!-- Email subscription -->
+</section>
 
-<!-- Social icons -->
+
+
+
+<footer>&copy;2022. Todos os direitos reservados</footer>
+
 
 <!-- Scroll to top button -->
+
+
 
 <!-- Web page script -->
 <script src="assets/js/app.js"></script>

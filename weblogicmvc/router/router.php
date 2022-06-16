@@ -6,6 +6,8 @@ require_once 'startup/boot.php';
 // Chamar Models do ActiveRecords
 require_once 'Models/ActiveRecords/Empresas.php';
 require_once 'Models/ActiveRecords/Users.php';
+require_once 'Models/ActiveRecords/Linhasfaturas.php';
+require_once 'Models/ActiveRecords/Faturas.php';
 
 // Chamar controladores
 require_once 'Controllers/LoginController.php';
@@ -41,3 +43,4 @@ if (!isset($_GET['c']) || !isset($_GET['a'])) {
 
         case 'administrador':
             $controlador = new AdminController();
+            

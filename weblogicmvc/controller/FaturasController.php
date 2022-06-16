@@ -1,17 +1,13 @@
 <?php
-
-
-
-
 include '../view/factura.html';
 include_once '../model/ActiveRecord/Users.php';
 include_once '../model/ActiveRecord/Empresas.php';
 include_once '../model/ActiveRecord/Faturas.php';
 include_once '../model/ActiveRecord/Linhafaturas.php';
+include_once '../model/ActiveRecord/Produtos.php';
+include_once '../model/ActiveRecord/Ivas.php';
 include_once '../../vendor/autoload.php';
-
-
-ActiveRecord\Config::initialize(function ($cfg) //Configuração do Active Record
+ActiveRecord\Config::initialize(function($cfg) //Configuração do Active Record
 {
     $cfg->set_model_directory('..\model\ActiveRecord');
     $cfg->set_connections(
@@ -21,34 +17,64 @@ ActiveRecord\Config::initialize(function ($cfg) //Configuração do Active Recor
     );
     $cfg->set_default_connection('development');
 });
-
-
-
-if (isset($_POST['novaFactura']))
+echo "
+    <script>
+        document.getElementById(\"selectProductos\").innerHTML = \"";
+foreach(Produto::all() as $produto)
 {
-$funcionario = User::find(
-array(
-'email' => $_SESSION['email']
-)
-);
-$cliente = User::find(
-array(
-'username' => $_POST['cliente']
-)
-);
-$empresa = Empresa::find(
-array(
-'designacaosocial' => $_POST['empresa']
-)
-);
-
-InicializarFatura($empresa, $funcionario, $cliente);
+    $nomeProd = $produto->descricao;
+    $idProd = $produto->idproduto;
+    echo "<option value=\\\"$idProd\\\">$nomeProd</option>";
 }
-
-
-function InicializarFatura($empresa, $funcionario, $cliente)//Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
+echo "\"
+        ;
+    </script>
+    ";
+$arrayProductos = array();
+$arrayTabela = array();
+if(isset($_POST['novaFactura']))
 {
-    //É PRECISO ADICIONAR SELECÇÃO DE PRODUCTOS
+    $funcionario = User::find(
+        array(
+            'email' => $_SESSION['email']
+        )
+    );
+    $cliente = User::find(
+        array(
+            'username' => $_POST['cliente']
+        )
+    );
+    $empresa = Empresa::find(
+        array(
+            'designacaosocial' => $_POST['empresa']
+        )
+    );
+    CriarStart($empresa, $funcionario, $cliente, $arrayProductos);
+}
+if(isset($_POST['empresa']))
+{
+
+}
+if(isset($_POST['produto']))
+{
+    $produtoId = $_POST['addProdutos'];
+    $produtoQuantidade = $_POST['quantityProd'];
+    $arrayProductos += array($produtoId => $produtoQuantidade);
+    $produtoSelected = Produto::find($_POST['addProdutos']);
+    $produtoPreco = $produtoSelected->preco;
+    $produtoNome = $produtoSelected->descricao;
+    array_push($arrayTabela, (array($produtoId => array($produtoNome, $produtoQuantidade, $produtoPreco))));
+    echo "
+          <script>
+            document.getElementById(\"produtoSelect\").innerHTML = \"<tr><th>Id</th><th>Nome</th><th>Quantidade</th><th>Preço</th></tr>";
+        foreach($arrayTabela as $produto => $dados)
+        {
+            echo "<tr><td>$produto</td><td>$dados[0]</td><td>$dados[1]</td><td>$dados[2]\€</td></tr>";
+        }
+    echo "\"</script>";
+}
+function CriarStart($empresa, $funcionario, $cliente, $productos)// Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
+{
     // =============== Definição dos campos ===============
     $factura = new Fatura();
     $dataEmissao = date("d/m/Y - H:i");
@@ -167,7 +193,7 @@ function InicializarFatura($empresa, $funcionario, $cliente)//Iniciar a inserç�
                                     Nome:
                                 </td>
                                 <td>
-                                    $
+                                    $funcionarioNome
                                 </td>
                                 <td>
                                     Código-Postal:
@@ -203,4 +229,3 @@ function InicializarFatura($empresa, $funcionario, $cliente)//Iniciar a inserç�
             </div>
         ";
 }
-

@@ -7,21 +7,21 @@ include '../model/login.php';
 require_once 'startup/boot.php';
 
 // Chamar Models do ActiveRecords
-require_once 'Models/ActiveRecords/Empresas.php';
-require_once 'Models/ActiveRecords/Users.php';
-require_once 'Models/ActiveRecords/Linhasfaturas.php';
-require_once 'Models/ActiveRecords/Faturas.php';
+require_once 'model/ActiveRecord/Empresas.php';
+require_once 'model/ActiveRecord/Users.php';
+require_once 'model/ActiveRecord/Linhasfaturas.php';
+require_once 'model/ActiveRecord/Faturas.php';
 
 // Chamar controladores
-require_once 'Controllers/LoginController.php';
-require_once 'Controllers/FaturasController.php';
-require_once 'Controllers/AccountCreatorController.php';
-require_once 'Controller/BootController';
+require_once '../controller/LoginController.php';
+require_once '../controller/FaturasController.php';
+require_once '../controller/AccountCreatorController.php';
+require_once '../controller/BootController';
 
 
 if (!isset($_GET['cntrl']) || !isset($_GET['action'])) {
     $controlador = new LoginController();
-    $controlador->VistaLogin();
+    $controlador->FetchLoginView();
 } else {
     $controladorC = $_GET['cntrl'];
     $action = $_GET['action'];
@@ -36,7 +36,7 @@ if (!isset($_GET['cntrl']) || !isset($_GET['action'])) {
 
             switch ($action) {
                 case 'show':
-                    $controlador->VistaLogin();
+                    $controlador->FetchLoginView();
                     break;
                 case 'checkAuth':
                     $controlador->CheckLogin();

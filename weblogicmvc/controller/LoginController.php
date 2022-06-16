@@ -3,10 +3,11 @@
 class LoginController
 {
 
-    function DestroySession()
+    function Logout()
     {
         if (isset($_SESSION)) {
             session_destroy();
+            header("Location : ../view/LandingPage.html");
         }
     }
 
@@ -22,5 +23,12 @@ class LoginController
             }
         }
     }
+
+    function FetchLoginView()
+    {
+        require_once '../view/login.html';
+    }
+
+
 
 }

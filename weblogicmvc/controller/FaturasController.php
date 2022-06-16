@@ -17,6 +17,7 @@ ActiveRecord\Config::initialize(function($cfg) //Configuração do Active Record
     );
     $cfg->set_default_connection('development');
 });
+$arrayTabela = array();
 echo "
     <script>
         document.getElementById(\"selectProductos\").innerHTML = \"";
@@ -30,26 +31,11 @@ echo "\"
         ;
     </script>
     ";
-$arrayProductos = array();
-$arrayTabela = array();
 if(isset($_POST['novaFactura']))
 {
-    $funcionario = User::find(
-        array(
-            'email' => $_SESSION['email']
-        )
-    );
-    $cliente = User::find(
-        array(
-            'username' => $_POST['cliente']
-        )
-    );
-    $empresa = Empresa::find(
-        array(
-            'designacaosocial' => $_POST['empresa']
-        )
-    );
-    CriarStart($empresa, $funcionario, $cliente, $arrayProductos);
+    $factura = new Fatura();
+    $factura->funcionario = User::find(array('email'=>$_SESSION['email']))->userid;
+
 }
 if(isset($_POST['empresa']))
 {
@@ -57,29 +43,20 @@ if(isset($_POST['empresa']))
 }
 if(isset($_POST['produto']))
 {
-    $produtoId = $_POST['addProdutos'];
-    $produtoQuantidade = $_POST['quantityProd'];
-    $arrayProductos += array($produtoId => $produtoQuantidade);
-    $produtoSelected = Produto::find($_POST['addProdutos']);
-    $produtoPreco = $produtoSelected->preco;
-    $produtoNome = $produtoSelected->descricao;
-    array_push($arrayTabela, (array($produtoId => array($produtoNome, $produtoQuantidade, $produtoPreco))));
+    $linha = new Linhafatura();
     echo "
           <script>
             document.getElementById(\"produtoSelect\").innerHTML = \"<tr><th>Id</th><th>Nome</th><th>Quantidade</th><th>Preço</th></tr>";
-        foreach($arrayTabela as $produto => $dados)
+        foreach(Linhafatura::all() as $linhaFac)
         {
-            echo "<tr><td>$produto</td><td>$dados[0]</td><td>$dados[1]</td><td>$dados[2]\€</td></tr>";
+                echo "<tr><td>[0]</td><td>[1]</td><td>[2]</td><td>[3]\€</td></tr>";
         }
     echo "\"</script>";
-}
-function CriarStart($empresa, $funcionario, $cliente, $productos)// Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
+/*}
+
+function Imprimir($empresa, $funcionario, $cliente, $productos)// Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
 {
     // =============== Definição dos campos ===============
-    $factura = new Fatura();
-    $dataEmissao = date("d/m/Y - H:i");
-    $factura->data = $dataEmissao;
-
     $empresaNome = $empresa->designacaosocial;
     $empresaCP = $empresa->codigopostal;
     $empresaNif = $empresa->nif;
@@ -227,5 +204,5 @@ function CriarStart($empresa, $funcionario, $cliente, $productos)// Iniciar a in
                         </table>
                 </div>
             </div>
-        ";
+        ";*/
 }

@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include '..\visual\main.html';
+    include '..\view\main.html';
     $username = getFromUser('username');
     $role = getFromUser('role');
 

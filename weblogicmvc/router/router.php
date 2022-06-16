@@ -1,5 +1,8 @@
 <?php
 
+include '../view/login.html';
+include '../model/login.php';
+
 // Arranque da aplicação
 require_once 'startup/boot.php';
 
@@ -12,13 +15,16 @@ require_once 'Models/ActiveRecords/Faturas.php';
 // Chamar controladores
 require_once 'Controllers/LoginController.php';
 require_once 'Controllers/FaturasController.php';
+require_once 'Controllers/AccountCreatorController.php';
+require_once 'Controller/BootController';
 
-if (!isset($_GET['c']) || !isset($_GET['a'])) {
+
+if (!isset($_GET['cntrl']) || !isset($_GET['action'])) {
     $controlador = new LoginController();
     $controlador->VistaLogin();
 } else {
-    $controladorC = $_GET['c'];
-    $action = $_GET['a'];
+    $controladorC = $_GET['cntrl'];
+    $action = $_GET['action'];
 
     $controladorTeste = new LoginController();
     if ($controladorC != 'login' && !isset($_SESSION["username"]))
@@ -43,4 +49,4 @@ if (!isset($_GET['c']) || !isset($_GET['a'])) {
 
         case 'administrador':
             $controlador = new AdminController();
-            
+

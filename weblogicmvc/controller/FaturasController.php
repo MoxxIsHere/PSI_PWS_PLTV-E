@@ -1,5 +1,5 @@
 <?php
-    include '../visual/factura.html';
+    include '../view/factura.html';
     include_once '../model/ActiveRecord/Users.php';
     include_once '../model/ActiveRecord/Empresas.php';
     include_once '../model/ActiveRecord/Faturas.php';

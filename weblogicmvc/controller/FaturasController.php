@@ -1,63 +1,72 @@
 <?php
-    include '../view/factura.html';
-    include_once '../model/ActiveRecord/Users.php';
-    include_once '../model/ActiveRecord/Empresas.php';
-    include_once '../model/ActiveRecord/Faturas.php';
-    include_once '../model/ActiveRecord/Linhafaturas.php';
-    include_once '../../vendor/autoload.php';
-    ActiveRecord\Config::initialize(function($cfg) //Configuração do Active Record
-    {
-        $cfg->set_model_directory('..\model\ActiveRecord');
-        $cfg->set_connections(
-            array(
-                'development' => 'mysql://root@localhost:3306/phpdb?charset=utf8',
-            )
-        );
-        $cfg->set_default_connection('development');
-    });
-    if(isset($_POST['novaFactura']))
-    {
-        $funcionario = User::find(
-            array(
-                'email' =>$_SESSION['email']
-            )
-        );
-        $cliente = User::find(
-            array(
-                'username' => $_POST['cliente']
-            )
-        );
-        $empresa = Empresa::find(
-            array(
-                'designacaosocial' => $_POST['empresa']
-            )
-        );
-        CriarStart($empresa, $funcionario, $cliente);
-    }
 
-    function CriarStart($empresa, $funcionario, $cliente)//Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
-    {
-        //É PRECISO ADICIONAR SELECÇÃO DE PRODUCTOS
-        // =============== Definição dos campos ===============
-        $factura = new Fatura();
-        $dataEmissao = date("d/m/Y - H:i");
-        $factura->data = $dataEmissao;
+class FaturasController
 
-        $empresaNome = $empresa->designacaosocial;
-        $empresaCP = $empresa->codigopostal;
-        $empresaNif = $empresa->nif;
-        $empresaMorada = $empresa->morada;
-        $empresaLocalidade = $empresa->localidade;
-        $empresaTelefone = $empresa->telefone;
 
-        $clienteUsername = $cliente->username;
-        $clienteCP = $cliente->codigopostal;
-        $clienteNif = $cliente->nif;
-        $clienteMorada = $cliente->morada;
-        $clienteLocalidade = $cliente->localidade;
-        $clienteTelefone = $cliente->telefone;
-        // ====================================================
-        echo "
+include '../view/factura.html';
+include_once '../model/ActiveRecord/Users.php';
+include_once '../model/ActiveRecord/Empresas.php';
+include_once '../model/ActiveRecord/Faturas.php';
+include_once '../model/ActiveRecord/Linhafaturas.php';
+include_once '../../vendor/autoload.php';
+
+
+ActiveRecord\Config::initialize(function ($cfg) //Configuração do Active Record
+{
+    $cfg->set_model_directory('..\model\ActiveRecord');
+    $cfg->set_connections(
+        array(
+            'development' => 'mysql://root@localhost:3306/phpdb?charset=utf8',
+        )
+    );
+    $cfg->set_default_connection('development');
+});
+
+if (isset($_POST['novaFactura']))
+{
+$funcionario = User::find(
+array(
+'email' => $_SESSION['email']
+)
+);
+$cliente = User::find(
+array(
+'username' => $_POST['cliente']
+)
+);
+$empresa = Empresa::find(
+array(
+'designacaosocial' => $_POST['empresa']
+)
+);
+
+InicializarFatura($empresa, $funcionario, $cliente);
+}
+
+
+function InicializarFatura($empresa, $funcionario, $cliente)//Iniciar a inserção de dados na factura (inputs: $empresa = objecto da empresa a emitir a factura | $funcionario = objecto do funcionário loggado| $cliente = objecto do cliente receptor da factura)
+{
+    //É PRECISO ADICIONAR SELECÇÃO DE PRODUCTOS
+    // =============== Definição dos campos ===============
+    $factura = new Fatura();
+    $dataEmissao = date("d/m/Y - H:i");
+    $factura->data = $dataEmissao;
+
+    $empresaNome = $empresa->designacaosocial;
+    $empresaCP = $empresa->codigopostal;
+    $empresaNif = $empresa->nif;
+    $empresaMorada = $empresa->morada;
+    $empresaLocalidade = $empresa->localidade;
+    $empresaTelefone = $empresa->telefone;
+
+    $clienteUsername = $cliente->username;
+    $clienteCP = $cliente->codigopostal;
+    $clienteNif = $cliente->nif;
+    $clienteMorada = $cliente->morada;
+    $clienteLocalidade = $cliente->localidade;
+    $clienteTelefone = $cliente->telefone;
+    // ====================================================
+    echo "
             <div id=\"factura\">
                 <div id=\"cabecalho\">
                     <p>$dataEmissao</p>
@@ -143,10 +152,10 @@
                     <hr>
                 </div>
                 <div id=\"corpo\">";
-        //foreach->linha de factura
+    //foreach->linha de factura
 
 
-        echo "
+    echo "
                 </div>
                 <div id=\"rodape\">
                     <p>Emitido por:</p>
@@ -191,4 +200,5 @@
                 </div>
             </div>
         ";
-    }
+}
+

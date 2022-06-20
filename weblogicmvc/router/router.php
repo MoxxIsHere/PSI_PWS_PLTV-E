@@ -46,7 +46,4 @@ if (!isset($_GET['cntrl']) || !isset($_GET['action'])) {
                     break;
             }
             break;
-
-        case 'administrador':
-            $controlador = new AdminController();
-
+    }}

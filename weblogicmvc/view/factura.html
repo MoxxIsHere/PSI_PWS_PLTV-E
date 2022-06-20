@@ -19,5 +19,28 @@
         <form method="post">
             <input type="submit" name="novaFactura" value="Criar Factura">
         </form>
+
+        <table id="fetchcliente" style="border-style: solid">
+            <tr><th>Cliente</th></tr>
+        </table><br>
+        <form method="post">
+            <input type="submit" name="Cliente" value="Encontrar cliente">
+                <label for="clientes">Escolha um cliente:</label>
+            <input type="submit" value="Submit">
+            <?php
+                  $user = User::all(array('conditions' => 'role = "cliente"'));
+            echo ' <select name="cliente" id="cliente">';
+
+            for ($i=1;$i<count($user);$i++){
+            $user[$i]->username  </count>
+            echo '<option  value="'.$user[$i]->iduser.'">'. $user[$i]->username .'</option>';
+
+            }
+
+            echo '</select>';
+            ?>
+        </form>
+
+
     </body>
 </html>
